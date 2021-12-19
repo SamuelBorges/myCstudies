@@ -1,28 +1,25 @@
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
+#define SIZE 20
 
-void main()
+
+
+int main()
 {
-	
-	char name[50];
-	float weight, height, bmi;
-	printf("Thats definitively the first phrase I wrote in C\n");
-	printf("\n");
-	
-	printf("Tell me your name: ");
-	scanf("%s", &name);
-	
-	
-	printf("\n Thanks mr(s)%s, now your name is registered in the F.I.B. database\n");
-	
-	printf("\nHmm and now I need your weight:");
-	scanf("%f", &weight);
-	
-	printf("How about your height too:");
-	scanf("%f", &height);
-	
-	bmi = weight / height;
-	
-	printf("\n\n According with our super processors your BMI is ---> %.2f", bmi);
-	printf(" <---");
+	char palavra1[SIZE], palavra2[SIZE], palavra3[SIZE], caracter;
+	int i=0;
+
+	printf("Digite o desejado: ");
+	scanf("%20[^\n]", palavra1);
+
+	strcpy (palavra2, palavra1);
+
+	printf("Complete: ");
+	scanf("%20[^\n]", palavra3);
+
+	strcat(palavra2, palavra3);
+
+	printf("\n---- %s -----", palavra2);
+	return 0;
 }
