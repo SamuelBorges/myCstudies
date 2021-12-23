@@ -4,22 +4,31 @@
 #define SIZE 20
 
 
+void invert(int vector, int position)
+{
+    int helper, vactorLenght = position - 1;
+
+    for (position = 0; position <= vactorLenght ; position++)
+    {
+      helper = vector[position];
+      vector[position] = vector[tamanho_vetor];
+      vector[tamanho_vetor] = auxiliar;
+      tamanho_vetor--;
+	  printf("%d ", vector[position]);
+    }
+}
 
 int main()
 {
-	char palavra1[SIZE], palavra2[SIZE], palavra3[SIZE], caracter;
-	int i=0;
-
-	printf("Digite o desejado: ");
-	scanf("%20[^\n]", palavra1);
-
-	strcpy (palavra2, palavra1);
-
-	printf("Complete: ");
-	scanf("%20[^\n]", palavra3);
-
-	strcat(palavra2, palavra3);
-
-	printf("\n---- %s -----", palavra2);
+	int vector[3], position;
+	
+	for(position = 0; position < sizeof(vector); position++ ){
+		prinf("Bring me a value");
+		scanf("%d", &vetor[position]);
+	}
+	prinf("\n");
+	
 	return 0;
 }
+
+https://pt.stackoverflow.com/questions/366216/fun%C3%A7%C3%A3o-para-inverter-vetor-c
